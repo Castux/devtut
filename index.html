@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Title</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="slide-style.css">
-    </head>
-    <body>
-        <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
-        <script>
-            //var slideshow = remark.create({sourceUrl: '1.MemoryModel.md', highlightStyle: "monokai"});
-            var slideshow = remark.create({sourceUrl: '2.HelloWorld.md', highlightStyle: "github"});
-        </script>
-    </body>
+	<head>
+		<title>Title</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="slide-style.css">
+	</head>
+	<body>
+		<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+		<script>
+			var sources = [
+				'0.Intro.md',
+				'1.MemoryModel.md',
+				'2.HelloWorld.md',
+				'3.GettingStarted.md'
+			];
+
+			remark.create({sourceUrl: sources[0], highlightStyle: "monokai"});
+		</script>
+	</body>
 </html>
