@@ -39,20 +39,7 @@ To program, you will need:
 	- books
 
 But first, we need to pick a language.
-
----
-
-# Picking a language
-
-- if quite mad, but interested in the hardcore bottom-up approach, assembly
-- if quite serious, C, for fundamental understanding of low-level computing, then C++
-- if quite serious, but want to skip the PitA low-levelness, C#, D (or god forbid, Java)
-- if interested mostly in algorithmics, quick applications and practical things, an interpreted language: Lua, Python, Ruby
-- the more the merrier: never stop learning new things!
-
-We will learn Lua.
-
- ![Lua logo](http://www.lua.org/images/lua.gif)
+ 
 ---
 
 # Lua 5.1
@@ -67,7 +54,7 @@ We will learn Lua.
 - very expressive/extensible
 - widely used (Angry Birds, World of Warcraft UI, scripting of many very big games...)
 
-Great stuff!
+![Lua logo](http://www.lua.org/images/lua.gif)
 
 ---
 
@@ -83,6 +70,50 @@ An "all included" package:
 
 ---
 
+# Other OSes
+
+On Debian based Linux distributions:
+
+```
+sudo apt-get install lua51
+```
+
+Mac OS X:
+
+```
+curl -O http://www.lua.org/ftp/lua-5.1.5.tar.gz
+tar -xzvf lua-5.1.5.tar.gz
+cd lua-5.1.5
+make macosx
+make test
+sudo make install
+```
+
+---
+
+Text editor
+===========
+
+I recommend [Sublime Text](http://www.sublimetext.com/)
+
+- Windows, Linux, Mac OS X
+- free for "evaluation purposes" (will nag you once in a while)
+- veeeeeery good text editor
+
+To be able to run Lua programs from the editor, select `Tools -> Build System -> New Build System...`, paste this in the file:
+
+```
+{
+	"cmd": ["lua", "$file"],
+	"file_regex": "^lua: (...*?):([0-9]*):?([0-9]*)",
+	"selector": "source.lua"
+}
+```
+
+Save file as `Lua.sublime-build` in the proposed directory. Run a file with `Ctrl-B`.
+
+---
+
 # Checking the install
 
 A good old "Hello World" program:
@@ -92,11 +123,11 @@ print("Hello, world!")
 ```
 
 - save it in a file `hello.lua`
-- run it from command line `lua hello.lua`, or from the text editor
+- run it from command line `lua hello.lua`, or from the text editor (eg. `Ctrl-B` in Sublime)
 
 Should output:
 
-```foo
+```
 Hello, world!
 ```
 

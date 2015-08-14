@@ -1,19 +1,30 @@
 class: center middle
 
-# The memory model
+# Computer architecture
 
 ## What is a computer?
+
+---
+
+Computer
+========
+
+A computer is:
+
+- an electronic device (mechanical, biological?)
+- programmable (it runs *programs*, ie. user-defined sequences of instructions)
+- processes data (programs read, treat and write information from/to memory and peripherals)
 
 ---
 
 Von Neumann architecture
 ========================
 
-- processor
-- random access memory (RAM)
+- processor (CPU: central processing unit)
+- memory (RAM: random access memory)
 - peripherals
 
-Program: sequence of machine code instructions encoded in binary
+Program: sequence of machine code instructions encoded with binary numbers
 
 ![Von Neumann](http://www-history.mcs.st-and.ac.uk/BigPictures/Von_Neumann_5.jpeg)
 
@@ -31,12 +42,38 @@ To execute ("run") a program:
 - processor goes to next instruction
 - go on forever
 
-Which means:
+---
 
-- Program and data are in the *same* memory!
-- Program *is* data!
-- Confusing!
-- Irrelevant for this course!
+Harvard architecture
+====================
+
+- processor
+- program memory
+- data memory
+- peripherals
+
+Advantages:
+
+- can access both memories independently, at the same time: more efficient
+- both memories can have different technical characteristics: optimized electronics
+
+In practice, "Modified Harvard architecture":
+
+- common memory for both program and data (allows moving programs around as if they were data)
+- different buses and caches for program and data (allows accessing both at the same time)
+
+---
+
+Harvard architecture (2)
+========================
+
+cache:
+
+> (computing) A fast temporary storage where recently or frequently used information is stored to avoid having to reload it from a slower storage medium.
+
+bus:
+
+> (computing) A distinct set of conductors carrying data and control signals within a computer system, to which pieces of equipment may be connected in parallel.
 
 ---
 
@@ -68,9 +105,20 @@ Instructions in a program are mostly about:
 - jumping to other instructions depending on some data ("if this, then jump"). Otherwise a program would always do the exact same thing, boring.
 - that's pretty much it!
 
+---
+
+Program and data
+================
+
 You can now write Mass Effect 3!
 
 ![ME](http://wallofscribbles.com/wp-content/uploads/2012/11/Mass-Effect-3-Fem-Shep.jpg)
+
+Mozilla Firefox:
+
+- ~15 million LOC
+- ~60 MB of machine code
+- ~10 million instructions
 
 ---
 
@@ -84,8 +132,8 @@ Memory is just a big bunch of boxes. Each box:
 
 When the processor deals with memory, it looks like this:
 
-- write result of previous operation to some address
-- read number from some address, and use it for next operation
+- read number from some address, and use it for operation
+- write result of operation to some address
 
 ---
 
@@ -109,7 +157,7 @@ So, integers from 0 to 255 are not enough?
 
 Fortunately, the processor can also read, write and operate directly on integers of these sizes.
 
-- Negative integers? Just interpret the first bit a being the sign, and the rest as a positive integer (that's a lie).
+- Negative integers? Just interpret the first bit as the sign, and the rest as a positive integer (that's a lie).
 - Non integer numbers? Use part of the bits for the integer part, and the rest for the fractional part (that's also a lie).
 
 ---
@@ -136,7 +184,7 @@ class: center middle
 Base 2 positional numeral system. Just like "ordinary" numbers are base 10.
 
 ```
-25486 = 2 * 10^4 +  5 * 10^3 + 4 * 10^2 + 8 * 10^1 + 6 * 10^0
+25486 = 2 * 10^4  + 5 * 10^3 + 4 * 10^2 + 8 * 10^1 + 6 * 10^0
       = 2 * 10000 + 5 * 1000 + 4 * 100  + 8 * 10   + 6 * 1
 
 

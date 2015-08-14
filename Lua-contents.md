@@ -106,6 +106,18 @@ Algorithmics 101
 
 - sudoku
 
+Lua 103
+=======
+
+- tables as dictionaries
+- table as structs: syntactic sugar
+	- standard library
+- tables as arrays: it was a lie
+	- can use all three at the same time
+- generic for
+	- pairs
+	- ipairs
+
 Lua advanced
 ============
 
