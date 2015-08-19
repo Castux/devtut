@@ -5,3 +5,5 @@
 	- languages by popularity + sorted with categories
 
 - 1.MemoryModel 0h45
+
+- Lua 101: 2h
