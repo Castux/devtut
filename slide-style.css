@@ -55,7 +55,17 @@ blockquote:before
 	margin-right: 0.25em;
 	vertical-align: -0.4em;
 }
+
 blockquote p
 {
   display: inline;
+}
+
+table, th, td
+{
+	border: 1px solid gray;
+	border-collapse: collapse;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px 10px;
 }
