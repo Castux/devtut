@@ -11,9 +11,6 @@ Once in a while, italics to give names of things, or less important information
 	- bigger expressions
 		- parentheses
 		- precedence
-	- comparing numbers
-		- order
-		- equality
 - variables (storing results)
 	- assignment
 	- reusing in expressions
@@ -27,6 +24,9 @@ Once in a while, italics to give names of things, or less important information
 		- can concat a number!
 	- length
 - logic
+	- comparing numbers
+		- order
+		- equality
 	- storing booleans
 	- literals
 	- operators and truth tables
