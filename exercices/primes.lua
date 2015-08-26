@@ -1,21 +1,16 @@
-function deco(n)
+for i = 2,1000 do
 
-	local res = {}
+	isPrime = true
 
-	local div = 2
-	while n > 1 do
-		if n % div == 0 then
-			res[#res + 1] = div
-			n = n / div
-		else
-			div = div + 1
+	for j = 2, i-1 do
+		if i % j == 0 then
+			isPrime = false
+			break
 		end
 	end
 
-	return res
-end
+	if isPrime then
+		print(i)
+	end
 
-for i = 1,1000 do
-	local res = deco(i)
-	print(i, table.concat(res, ","))
 end
