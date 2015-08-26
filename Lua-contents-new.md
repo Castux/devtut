@@ -38,13 +38,14 @@ Once in a while, italics to give names of things, or less important information
 		- print 1 to 10 exercice
 	- you are now a programmer!
 		- note on indentation
-	- numeric for
-	- nesting
-
-- appendix
-	- additional arithmetics?
-	- sci notation?
-	- multiple assignment
 	
+
+- bonus
+	- numeric for
+	- break
+	- additional arithmetics
+	- sci notation
+	- multiple assignment
+
 - exercices
 
