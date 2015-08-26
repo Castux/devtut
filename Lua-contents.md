@@ -1,42 +1,47 @@
 Lua 101
 =======
 
-- Running the interpreter
-	- from command line
-	- from an IDE
-	- one program = one file (or more later)
-
 - before we start
-	- comments
+	- comments/ws
 	- print
-	- assigning to a variable (not explained)
-
-- basic types and literals
-	- number (decimal, hex, sci. notation)
-	- string (single quotes, double quotes, long string)
-	- boolean
+		- multiple values
+- numbers
+	- basic number operations
+	- bigger expressions
+		- parentheses
+		- precedence
+- variables (storing results)
+	- assignment
+	- reusing in expressions
+	- overwriting
+		- ex: incrementing
 	- nil
-
-- expressions
-	- single literal or variable
-	- arithmetic
-	- relational
-	- logical
-	- concat
-	- parentheses and precedence
-
-- type coercion
-	- number to string (auto and tostring())
-	- string to number (auto and tonumber())
-	- booleans: false and nil are false, everything else is true
-
-- statements
-	- assignment (multiple)
-	- if then else
+- text
+	- single quoted
+	- overview of others
+	- concatenation
+		- can concat a number!
+	- length
+- logic
+	- comparing numbers
+		- order
+		- equality
+	- storing booleans
+	- literals
+- types recap
+	- vocab: variable, value, expression, operator, etc.
+- flow control!
+	- if, else, elseif
 	- while
-	- repeat  (as shortcut for while)
-	- num for (as shortcut for while)
+		- print 1 to 10 exercice
+	- you are now a programmer!
+		- note on indentation
+- bonus
+	- numeric for
 	- break
+	- additional arithmetics
+	- sci notation
+	- multiple assignment
 
 - exercices!
 	- 99 bottles of beer on the wall
@@ -45,7 +50,7 @@ Lua 101
 	- factorial
 	- check palindrome (give string.sub(s,i,i))
 	- check primality
-	- prime decomposition
+	- compound interests
 
 Lua 102
 =======
