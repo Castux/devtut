@@ -41,12 +41,10 @@ Once in a while, italics to give names of things, or less important information
 	- numeric for
 	- nesting
 
-- exercices
-
 - appendix
 	- additional arithmetics?
 	- sci notation?
 	- multiple assignment
-	- number to string coercion
-	- repeat until
-	- break
+	
+- exercices
+
