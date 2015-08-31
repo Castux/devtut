@@ -1,20 +1,5 @@
 input = "a man a plan a canal panama"
 
-original = input	-- saved for the final message
-
--- optional: remove spaces
-
-withoutSpaces = ""
-
-for i = 1,#input do
-	letter = string.sub(input, i, i)
-	if letter ~= " " then
-		withoutSpaces = withoutSpaces .. letter
-	end
-end
-
-input = withoutSpaces
-
 -- reverse
 
 reverse = ""
