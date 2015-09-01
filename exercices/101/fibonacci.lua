@@ -7,5 +7,6 @@ print(b)
 for i = 3,100 do
 	c = a + b
 	print(c)
-	a, b = b, c
+	a = b
+	b = c
 end

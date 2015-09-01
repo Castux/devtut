@@ -1,4 +1,4 @@
-input = "a man a plan a canal panama"
+input = "amanaplanacanalpanama"
 
 -- reverse
 
@@ -11,7 +11,7 @@ end
 -- check if they are the same
 
 if input == reverse then
-	print("'" .. original .. "' is a palindrome!")
+	print("'" .. input .. "' is a palindrome!")
 else
-	print("'" .. original .. "' is not a palindrome!")
+	print("'" .. input .. "' is not a palindrome!")
 end
