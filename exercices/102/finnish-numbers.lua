@@ -85,3 +85,12 @@ function upTo999999(n)
 
 	return result
 end
+
+function toFinnishSpelling(n)
+
+	if n > 999999 then
+		error("Only up to 999999 supported")
+	end
+
+	return upTo999999(n)
+end
