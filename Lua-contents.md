@@ -23,9 +23,9 @@ Lua 102
 Algorithmics 101
 ================
 
+- and/or/not?
 - sieve of erathostene
 - recursivity
-- and/or/not?
 - the sorting problem
 	- insertion sort
 	- bubble sort
