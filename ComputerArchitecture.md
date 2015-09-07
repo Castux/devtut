@@ -96,10 +96,10 @@ Program and data
 
 Instructions in a program are mostly about:
 
-- manipulate data
-	- read data from memory/peripherals
-	- write data to memory/peripherals
-	- perform simple operations on data
+- manipulating data
+	- reading data from memory/peripherals
+	- writing data to memory/peripherals
+	- performing simple operations on data
 		- arithmetics
 		- comparison
 - jumping to other instructions depending on some data ("if this, then jump"). Otherwise a program would always do the exact same thing, boring.

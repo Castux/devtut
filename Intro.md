@@ -61,7 +61,7 @@ class: middle
 What can't we program?
 ======================
 
-Computers are very fast for very simple tasks, which can be combined is less simple tasks that are necessarily slower. Very complex or "unnatural" tasks are typically slow, if even possible. Brains are very parallel in nature, and some tasks that are trivial for a human being are typically hard for computers:
+Computers are very fast for very simple tasks, which can be combined in less simple tasks that are necessarily slower. Very complex or "unnatural" tasks are typically slow, if even possible. Brains are very parallel in nature, and some tasks that are trivial for a human being are typically hard for computers:
 
 - recognizing shapes in a picture
 - finding an object in a collection in an instant
