@@ -6,22 +6,6 @@ class: middle center
 
 ---
 
-# Semantic nitpicking
-
-- language: syntactic and semantic rules that describe a set of valid textual inputs, and their meaning
-- computer language: a language somehow understood by a computer
-- programming language: a computer language that describes instructions to be executed by a computer
-- (source) code: text written in a computer language
-- algorithm: instructions to solve a specific problem (language agnostic)
-- program: the implementation of algorithm(s) in a programming language, once compiled or interpreted. "A piece of software". Something that the computer can execute.
-
-Not all computer languages are programming languages (eg. HTML describes data, not instructions).
-
-- to code: to write text in a computer language
-- to program: to write text in a *programming* language, ie. to write a program
-
----
-
 # Tools
 
 To program, you will need:
@@ -139,30 +123,6 @@ Hello, world!
 - [Programming in Lua 1st ed.](http://www.lua.org/pil/contents.html): text book by the author of the language. Just as complete, but more accessible as learning material.
 - [lua-users wiki](http://lua-users.org/wiki/): snippets, FAQ, libraries...
 - [Google](http://www.google.com/) is your friend.
-
----
-
-# Course content
-
-A healthy mix of:
-
-- general knowledge about:
-	- computers
-	- programming
-	- programming languages
-	- other computer languages
-	- more computer stuff
-- algorithmics (how to solve problems)
-- Lua
-	- syntax
-	- semantics
-	- standard library
-- other libraries/frameworks
-	- interactive applications (games, basically)
-		- handling mouse/keyboard input
-		- graphical output
-	- introduction to network
-	- more if interested!
 
 ---
 

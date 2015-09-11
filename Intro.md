@@ -307,6 +307,23 @@ In parallel, or after, learn Lua:
 
 ---
 
+Semantic nitpicking
+===================
+
+- language: syntactic and semantic rules that describe a set of valid textual inputs, and their meaning
+- computer language: a language somehow understood by a computer
+- programming language: a computer language that describes instructions to be executed by a computer
+- (source) code: text written in a computer language
+- algorithm: instructions to solve a specific problem (language agnostic)
+- program: the implementation of algorithm(s) in a programming language, once compiled or interpreted. "A piece of software". Something that the computer can execute.
+
+Not all computer languages are programming languages (eg. HTML describes data, not instructions).
+
+- to code: to write text in a computer language
+- to program: to write text in a *programming* language, ie. to write a program
+
+---
+
 "That was fun, I want more."
 ============================
 
