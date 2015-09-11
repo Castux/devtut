@@ -1,11 +1,13 @@
+local keepProbabilities = true
+
 function get_next_word(text, pos)
 
-	local start, finish = text:find("^['-,;:%.!?]", pos)
+	local start, finish = text:find("^[',;:!%-%?%.]", pos)
 	if start ~= nil then
 		return text:sub(start, finish)
 	end
 
-	start, finish = text:find("^%w+", pos)
+	start, finish = text:find("^%a+", pos)
 	if start ~= nil then
 		return text:sub(start, finish)
 	end
@@ -56,7 +58,11 @@ function analyze(words)
 			all_words[first][second] = {}
 		end
 
-		table.insert(all_words[first][second], third)
+		if keepProbabilities then
+			table.insert(all_words[first][second], third)
+		else
+			all_words[first][second][third] = true
+		end
 	end
 end
 
@@ -93,10 +99,15 @@ function generate(max)
 		local current = result[#result]
 
 		local candidates = all_words[previous][current]
+		local next_word
 		if candidates == nil then
-			print("Stuck!")
+			error("Stuck with: " .. previous .. " " .. current)
 		else
-			local next_word = candidates[math.floor(math.random() * #candidates) + 1]
+			if keepProbabilities then
+				next_word = random_array_element(candidates)
+			else
+				next_word = random_key(candidates)
+			end
 			table.insert(result, next_word)
 		end
 	end
@@ -123,5 +134,5 @@ analyze(parse_file("grimm.txt"))
 
 math.randomseed(os.time())
 
-local res = generate(100000)
+local res = generate(400)
 pretty_print(res)
