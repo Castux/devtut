@@ -1,15 +1,27 @@
 local keepProbabilities = true
 
+local punctuation =
+{
+	["."] = true,
+	[","] = true,
+	[";"] = true,
+	[":"] = true,
+	["!"] = true,
+	["?"] = true,
+	["-"] = true,
+	["'"] = true
+}
+
 function get_next_word(text, pos)
 
-	local start, finish = text:find("^[',;:!%-%?%.]", pos)
-	if start ~= nil then
-		return text:sub(start, finish)
+	local letter = string.sub(text, pos, pos)
+	if punctuation[letter] then
+		return letter
 	end
 
-	start, finish = text:find("^%a+", pos)
+	local start, finish = string.find(text, "^%a+", pos)
 	if start ~= nil then
-		return text:sub(start, finish)
+		return string.sub(text, start, finish)
 	end
 end
 
@@ -31,11 +43,11 @@ function parse_string(text)
 	return result
 end
 
-function parse_file(file)
+function parse_file(name)
 
-	local fp = io.open(file, "r")
-	local text = fp:read("*a")
-	fp:close()
+	local file = io.open(name, "r")
+	local text = file.read(file, "*a")
+	file.close(file)
 
 	return parse_string(text)
 end
@@ -76,7 +88,7 @@ function random_key(t, capitalOnly)
 	for k,v in pairs(t) do
 
 		if capitalOnly then
-			if k:find("^%u") then
+			if string.find(k, "^%u") then
 				table.insert(keys, k)
 			end
 		else
@@ -119,7 +131,10 @@ function pretty_print(words)
 
 	for i,v in ipairs(words) do
 
-		if v:find("%w") then
+		if i > 1 and
+			punctuation[v] == nil and
+			words[i-1] ~= "'" and
+			words[i-1] ~= "-" then
 			io.write(" ")
 		end
 
