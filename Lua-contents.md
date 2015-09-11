@@ -20,6 +20,27 @@ Lua 102
 - more loops
 - arrays
 
+Lua 103
+=======
+
+- tables as dictionaries
+- table as structs: syntactic sugar
+	- standard library
+- tables as arrays: it was a lie
+	- can use all three at the same time
+- generic for
+	- pairs
+	- ipairs
+
+	- files -> text processing
+	- exercise: markov chain?
+
+Lua 104
+=======
+
+- input/output
+	- command line -> tic-tac-toe
+
 Algorithmics 101
 ================
 
@@ -43,17 +64,6 @@ Algorithmics 101
 
 - sudoku
 
-Lua 103
-=======
-
-- tables as dictionaries
-- table as structs: syntactic sugar
-	- standard library
-- tables as arrays: it was a lie
-	- can use all three at the same time
-- generic for
-	- pairs
-	- ipairs
 
 Lua advanced
 ============
