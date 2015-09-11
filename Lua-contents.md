@@ -23,6 +23,7 @@ Lua 102
 Lua 103
 =======
 
+- and/or/not?
 - tables as dictionaries
 - table as structs: syntactic sugar
 	- standard library
@@ -39,12 +40,12 @@ Lua 104
 =======
 
 - input/output
+	- guessing game
 	- command line -> tic-tac-toe
 
 Algorithmics 101
 ================
 
-- and/or/not?
 - sieve of erathostene
 - recursivity
 - the sorting problem
