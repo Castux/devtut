@@ -25,14 +25,15 @@ Lua 103
 
 - and/or/not?
 - tables as dictionaries
-- tables as arrays: it was a lie
-	- can use all three at the same time
+- tables as arrays
 - generic for
 	- pairs
 	- ipairs
+- multiple assignment
+	- multiple return values
 
-	- files -> text processing
-	- exercise: markov chain?
+- files -> text processing
+- exercise: markov chain?
 
 Lua 104
 =======
