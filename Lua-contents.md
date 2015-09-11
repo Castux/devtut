@@ -25,8 +25,6 @@ Lua 103
 
 - and/or/not?
 - tables as dictionaries
-- table as structs: syntactic sugar
-	- standard library
 - tables as arrays: it was a lie
 	- can use all three at the same time
 - generic for
@@ -39,6 +37,8 @@ Lua 103
 Lua 104
 =======
 
+- table as structs: syntactic sugar
+	- standard library
 - input/output
 	- guessing game
 	- command line -> tic-tac-toe
