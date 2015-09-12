@@ -88,7 +88,7 @@ function random_key(t, capitalOnly)
 	for k,v in pairs(t) do
 
 		if capitalOnly then
-			if string.find(k, "^%u") then
+			if string.match(k, "^%u") then
 				table.insert(keys, k)
 			end
 		else
