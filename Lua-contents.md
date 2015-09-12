@@ -67,9 +67,7 @@ Algorithmics 101
 - sudoku
 
 
-Lua advanced
-============
+TODO
+====
 
-- closures
-- storing/passing/returning functions
-- iterators
+- boolean evaluation

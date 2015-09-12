@@ -1,0 +1,16 @@
+http://www.thenoisecast.com/2011/04/a-brief-timeline-of-influential-women-in-computing-history/
+
+- Ada Lovelace
+- Hedy Lamarr
+- Grace Hopper
+
+
+Men:
+
+- Turing
+- Von Neumann
+- Dennis Richie: C, UNIX
+- Ken Thompson: UNIX
+- Richard Stallman: GNU, Open Source
+- Bjarne Stroustrup: C++
+- Donald Knuth: Algorithms
