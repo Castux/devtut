@@ -19,9 +19,9 @@ function get_next_word(text, pos)
 		return letter
 	end
 
-	local start, finish = string.find(text, "^%a+", pos)
-	if start ~= nil then
-		return string.sub(text, start, finish)
+	local match = string.match(text, "^%a+", pos)
+	if match ~= nil then
+		return match
 	end
 end
 
