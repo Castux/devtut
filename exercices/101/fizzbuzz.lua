@@ -2,7 +2,7 @@ for i = 1,100 do
 
 	if i % 3 == 0 then
 		if i % 5 == 0 then
-			print("Fizzbuzz")
+			print("FizzBuzz")
 		else
 			print("Fizz")
 		end
