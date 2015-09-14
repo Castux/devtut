@@ -71,3 +71,4 @@ TODO
 ====
 
 - boolean evaluation
+- patterns: character sets, captures
