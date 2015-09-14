@@ -27,8 +27,8 @@ It does:
 
 - includes another file
 - defines a `main` function which:
-	- does not take an argument (`void`)
-	- calls function `printf` with a string argument
+	- does not take an parameter (`void`)
+	- calls function `printf` with a string parameter
 	- returns value 0 ("all good")
 
 ---
@@ -183,7 +183,7 @@ Functions
 Take note:
 
 - declared return type
-- declared argument type and name
+- declared parameter type and name
 
 C is *statically* typed: the type of every variable must be known at compile time. The compiler will enforce some discipline, and will refuse to compile if we try to pass something else than an `int` to the function `print_and_double`.
 
@@ -207,7 +207,7 @@ print("ret = " .. ret)
 Notice:
 
 - no return type declaration
-- no argument type declaration (just the name)
+- no parameter type declaration (just the name)
 - `print` can actually print anything, not just strings
 - `print_and_double` can be passed a variable of any type, here we passed a number
 
