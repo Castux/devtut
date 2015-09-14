@@ -12,10 +12,14 @@ local punctuation =
 	["'"] = true
 }
 
+function is_allowed_punctuation(s)
+	return punctuation[s] == true
+end
+
 function get_next_word(text, pos)
 
 	local letter = string.sub(text, pos, pos)
-	if punctuation[letter] then
+	if is_allowed_punctuation(letter) then
 		return letter
 	end
 
@@ -25,11 +29,11 @@ function get_next_word(text, pos)
 	end
 end
 
-function parse_string(text)
+function get_all_words(text)
 	
 	local result = {}
 
-	local i = 0
+	local i = 1
 	while i <= #text do
 		local next_word = get_next_word(text, i)
 		if next_word ~= nil then
@@ -43,13 +47,13 @@ function parse_string(text)
 	return result
 end
 
-function parse_file(name)
+function read_file(name)
 
 	local file = io.open(name, "r")
 	local text = file.read(file, "*a")
 	file.close(file)
 
-	return parse_string(text)
+	return text
 end
 
 local all_words = {}
@@ -79,7 +83,7 @@ function analyze(words)
 end
 
 function random_array_element(array)
-	return array[math.floor(math.random() * #array) + 1]
+	return array[math.random(#array)]
 end
 
 function random_key(t, capitalOnly)
@@ -142,10 +146,10 @@ function pretty_print(words)
 	end
 end
 
-analyze(parse_file("dracula.txt"))
-analyze(parse_file("pap.txt"))
-analyze(parse_file("moby.txt"))
-analyze(parse_file("grimm.txt"))
+analyze(get_all_words(read_file("dracula.txt")))
+analyze(get_all_words(read_file("pap.txt")))
+analyze(get_all_words(read_file("moby.txt")))
+analyze(get_all_words(read_file("grimm.txt")))
 
 math.randomseed(os.time())
 
