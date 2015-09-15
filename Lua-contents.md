@@ -8,32 +8,25 @@ Lua 101
 - Truth and logic
 - Control flow
 - Bonus stuff
-- Exercices
 
 Lua 102
 =======
 
-- functions
-- details about functions
-- scope
-- standard library
-- more loops
-- arrays
+- Functions
+- Details about functions
+- Scope
+- Standard library
+- More loops
+- Arrays
 
 Lua 103
 =======
 
-- and/or/not?
-- tables as dictionaries
-- tables as arrays
-- generic for
-	- pairs
-	- ipairs
-- multiple assignment
-	- multiple return values
-
-- files -> text processing
-- exercise: markov chain?
+- Logical operators
+- Tables
+- Multiple assignments
+- String manipulation
+- Exercise: digital poetry
 
 Lua 104
 =======
