@@ -1,5 +1,3 @@
-local keepProbabilities = true
-
 local punctuation =
 {
 	["."] = true,
@@ -56,9 +54,7 @@ function read_file(name)
 	return text
 end
 
-local all_words = {}
-
-function analyze(words)
+function analyze(words, sequences)
 	
 	for i = 1,#words - 2 do
 
@@ -66,19 +62,15 @@ function analyze(words)
 		local second = words[i + 1]
 		local third = words[i + 2]
 
-		if all_words[first] == nil then
-			all_words[first] = {}
+		if sequences[first] == nil then
+			sequences[first] = {}
 		end
 
-		if all_words[first][second] == nil then
-			all_words[first][second] = {}
+		if sequences[first][second] == nil then
+			sequences[first][second] = {}
 		end
 
-		if keepProbabilities then
-			table.insert(all_words[first][second], third)
-		else
-			all_words[first][second][third] = true
-		end
+		table.insert(sequences[first][second], third)
 	end
 end
 
@@ -103,29 +95,21 @@ function random_key(t, capitalOnly)
 	return random_array_element(keys)
 end
 
-function generate(max)
+function generate(sequences, n)
 
+	math.randomseed(os.time())
 	local result = {}
 
-	table.insert(result, random_key(all_words, true))
-	table.insert(result, random_key(all_words[result[1]]))
+	table.insert(result, random_key(sequences, true))
+	table.insert(result, random_key(sequences[result[1]]))
 
-	while #result < max or result[#result] ~= "." do
+	while #result < n or result[#result] ~= "." do
 		local previous = result[#result - 1]
 		local current = result[#result]
 
-		local candidates = all_words[previous][current]
-		local next_word
-		if candidates == nil then
-			error("Stuck with: " .. previous .. " " .. current)
-		else
-			if keepProbabilities then
-				next_word = random_array_element(candidates)
-			else
-				next_word = random_key(candidates)
-			end
-			table.insert(result, next_word)
-		end
+		local candidates = sequences[previous][current]
+		local next_word = random_array_element(candidates)
+		table.insert(result, next_word)
 	end
 
 	return result
@@ -146,12 +130,11 @@ function pretty_print(words)
 	end
 end
 
-analyze(get_all_words(read_file("dracula.txt")))
-analyze(get_all_words(read_file("pap.txt")))
-analyze(get_all_words(read_file("moby.txt")))
-analyze(get_all_words(read_file("grimm.txt")))
+local sequences = {}
+analyze(get_all_words(read_file("dracula.txt")), sequences)
+analyze(get_all_words(read_file("pap.txt")), sequences)
+analyze(get_all_words(read_file("moby.txt")), sequences)
+analyze(get_all_words(read_file("grimm.txt")), sequences)
 
-math.randomseed(os.time())
-
-local res = generate(400)
+local res = generate(sequences, 400)
 pretty_print(res)
