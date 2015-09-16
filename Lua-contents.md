@@ -31,11 +31,13 @@ Lua 103
 Lua 104
 =======
 
-- table as structs: syntactic sugar
-	- standard library
+- captures in patterns
+	- read database, make records
 - input/output
 	- guessing game
 	- command line -> tic-tac-toe
+- table as structs: syntactic sugar
+	- standard library
 
 Algorithmics 101
 ================
