@@ -137,13 +137,28 @@ end
 function palin(s)
     if #s <= 1 then
         return true
-    elseif string.sub(s,1,1) ~= string.sub(s, #s, #s) then
-        return false
     else
-        return palin(string.sub(s, 2, #s-1))
+        return string.sub(s,1,1) == string.sub(s, #s, #s)
+            and palin(string.sub(s, 2, #s-1))
     end
-
 end
+```
+
+---
+
+# Exercise: permutations
+
+Write a function which, given an array, prints all possible permutations of that array (rearangement of the elements in all possible orders).
+
+```lua
+permutations({1,2,3})
+
+--> 1,2,3
+--> 1,3,2
+--> 2,1,3
+--> 2,3,1
+--> 3,2,1
+--> 3,1,2
 ```
 
 ---
