@@ -66,4 +66,5 @@ TODO
 ====
 
 - boolean evaluation
-- patterns: character sets, captures
+- patterns: character sets
+- generic for and iterators: string.gmatch, file:lines() -> rewrite split()
