@@ -14,3 +14,4 @@ Men:
 - Richard Stallman: GNU, Open Source
 - Bjarne Stroustrup: C++
 - Donald Knuth: Algorithms
+- Edsger W. Dijkstra
