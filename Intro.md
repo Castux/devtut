@@ -64,7 +64,7 @@ What can't we program?
 Computers are very fast for very simple tasks, which can be combined in less simple tasks that are necessarily slower. Very complex or "unnatural" tasks are typically slow, if even possible. Brains are very parallel in nature, and some tasks that are trivial for a human being are typically hard for computers:
 
 - recognizing shapes in a picture
-- finding an object in a collection in an instant
+- understanding/translating natural languages
 - doing anything "intelligent"
 
 If you can break up a problem in simple sub-problems, odds are you can write a program to solve it. Otherwise, you'll probably have to cheat.
@@ -120,18 +120,46 @@ At the lowest level:
 - assembly (machine code but in human readable form. Very difficult to write what you mean, very easy to make mistakes. Basically impossible to maintain.)
 
 ```asm
-D01H    equ 00DE0B6B3h
-D01L    equ 0A7640000h
-QtoA:
-    sub esp,12
-    xor ecx,ecx
-    sub eax,D01L
-    sbb edx,D01H
-    jb    @@a01f
-    sub eax,D04L
-    sbb edx,D04H
-    jb    @@a05
-    mov cl,05h
+_main:                                  # @main
+    pushl   %ebp
+    movl    %esp, %ebp
+    pushl   %edi
+    pushl   %esi
+    subl    $8, %esp
+    calll   ___main
+    movl    $0, (%esp)
+    calll   _time
+    movl    %eax, (%esp)
+    calll   _srand
+    movl    $1717986919, %edi       # imm = 0x66666667
+```
+
+---
+
+```asm
+LBB0_1:                                 # %while.body
+    calll   _rand
+    movl    %eax, %esi
+    imull   %edi
+    movl    %edx, %eax
+    shrl    $31, %eax
+    sarl    $3, %edx
+    addl    %eax, %edx
+    shll    $2, %edx
+    leal    (%edx,%edx,4), %eax
+    subl    %eax, %esi
+    movl    %esi, 4(%esp)
+    movl    $L_.str, (%esp)
+    calll   _printf
+    cmpl    $10, %esi
+    jne LBB0_1
+# BB#2:                                 # %while.end
+    xorl    %eax, %eax
+    addl    $8, %esp
+    popl    %esi
+    popl    %edi
+    popl    %ebp
+    retl
 ```
 
 ---
@@ -146,13 +174,12 @@ Higher (disguised assembly, plus bonuses to make life easier):
 ```c
 int main()
 {
-    int a, b;
+    int a;
     srand(time(NULL));
     while (1) {
         a = rand() % 20;
         printf("%d\n", a);
         if (a == 10) break;
-        printf("%d\n", b);
     }
     return 0;
 }
@@ -168,12 +195,12 @@ At the highest level:
 - Python, Ruby, Lua (interpreted languages, concise syntaxes, very dynamic, they allow to do pretty much anything and it works, memory safe)
 
 ```lua
-repeat
-	k = math.random(19)
-	print(k)
-	if k == 10 then break end
-	print(math.random(19))
-until false
+math.randomseed(os.time())
+while true do
+    k = math.random(19)
+    print(k)
+    if k == 10 then break end
+end
 ```
 
 At first sight, why bother with lower languages, they seem horrible, while the higher level ones are dreamy? Speed. High level languages have more layers of things going on, taking care of all the things "behind the scene" for you, and that takes ressources. They can be as much as 10~100 times slower than low-level languages.
