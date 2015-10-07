@@ -74,13 +74,23 @@ class: middle
 
 # What can't we program?
 
-Computers are very fast for very simple tasks, which can be combined in less simple tasks that are necessarily slower. Very complex or "unnatural" tasks are typically slow, if even possible. Brains are very parallel in nature, and some tasks that are trivial for a human being are typically hard for computers:
+Brains are:
+
+- not very fast (a neuron can be activated ~200 times per second)
+- very parallel (~100 billion neurons, each connected to ~7000 others)
+
+Computers are:
+
+- extremely fast (~100 billion instructions per second)
+- extremely linear (one instruction at a time)
+
+Computers are bad at what brains are good at:
 
 - recognizing shapes in a picture
 - understanding/translating natural languages
-- doing anything "intelligent"
+- doing anything "smart"
 
-If you can break up a problem in simple sub-problems, odds are you can write a program to solve it. Otherwise, you'll probably have to cheat.
+If you can break up a problem in simple sub-problems, odds are you can write a program to solve it. Otherwise, you'll probably have to cheat (eg. statistical methods).
 
 ---
 
@@ -200,7 +210,7 @@ LBB0_1:                                 # %while.body
 
 Higher (disguised assembly, plus bonuses to make life easier):
 
-- C, C++ (compiled languages, quite verbose, strict syntax, still very lax in terms of memory safety, error prone, but have many higher level constructs that makes coding more "logical" and closer to thought processes)
+C, C++ (compiled languages, quite verbose, strict syntax, still very lax in terms of memory safety, error prone, but have many higher level constructs that makes coding more "logical" and closer to thought processes)
 
 ```c
 int main()
@@ -222,7 +232,7 @@ int main()
 
 At the highest level:
 
-- Python, Ruby, Lua (interpreted languages, concise syntaxes, very dynamic, they allow to do pretty much anything and it works, memory safe)
+Python, Ruby, Lua (interpreted languages, concise syntaxes, very dynamic, they allow to do pretty much anything and it works, memory safe)
 
 ```lua
 math.randomseed(os.time())
@@ -233,7 +243,8 @@ while true do
 end
 ```
 
-At first sight, why bother with lower languages, they seem horrible, while the higher level ones are dreamy? Speed. High level languages have more layers of things going on, taking care of all the things "behind the scene" for you, and that takes ressources. They can be as much as 10~100 times slower than low-level languages.
+- great, but slower than low level (10-100 times)
+- still fast enough for many purposes
 
 ---
 
@@ -327,7 +338,10 @@ class: middle center
 
 "I want to learn to program. What language should I learn?"
 
-Impossible to answer. Many programmers end up knowing several (many!), each adapted to different purposes. However, it is probably a lot harder to go from high-level to lower levels than the opposite. Lots of idioms in high level languages can be though of as "bad habits" that just won't work in lower level.
+- impossible to answer
+- each language adapted to a different purpose
+- just learn many!
+- easier to go from low-level to high-level (but also harder to start from low-level...)
 
 ---
 
