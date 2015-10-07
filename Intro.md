@@ -373,3 +373,78 @@ Not all computer languages are programming languages (eg. HTML describes data, n
 class: middle
 
 > I'm a god!!
+
+---
+
+class: middle center
+
+# Appendix
+
+## Notable ladies in computing
+
+---
+
+# Ada Lovelace (1815-1852)
+
+- 1842: wrote the first algorithm to be implemented on Charles Babbage's Analytical Engine (the first mechanical computer)
+- the first computer programmer!
+- fixed the first computer bug
+- programming language Ada named after her
+
+![Ada Lovelace](https://upload.wikimedia.org/wikipedia/commons/2/2e/Ada_Lovelace_1838.jpg)
+
+---
+
+# Hedy Lamarr (1913-2000)
+
+- 1942: co-invented frequency-hopping spread spectrum technology to prevent radio jamming during World War 2
+- still used for most modern radio technologies: WiFi, Bluetooth, mobile phones, etc.
+- also, a famous actress...
+
+![Hedy Lamarr](https://upload.wikimedia.org/wikipedia/commons/f/f0/Hedy_Lamarr_in_a_1940_MGM_publicity_still.jpg)
+
+---
+
+# ENIAC programmers (1946)
+
+- Kay McNulty, Betty Jennings, Betty Snyder, Marlyn Wescoff, Fran Bilas, Ruth Lichterman
+- ENIAC: the first general purpose electronic computer (US Army)
+
+![ENIAC](https://upload.wikimedia.org/wikipedia/commons/3/3b/Two_women_operating_ENIAC.gif)
+
+---
+
+# Grace Hopper (1906–1992)
+
+- 1949-1952: invented the first English-like programming languages and their compilers (FLOW-MATIC & MATH-MATIC, for the UNIVAC, the first commercial computer in the US)
+- led to COBOL, a language still used today
+- also, a rear-admiral in the US Navy...
+
+![Grace Hopper](https://upload.wikimedia.org/wikipedia/commons/a/ad/Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg)
+
+---
+
+# And many more...
+
+See [Wikipedia][https://en.wikipedia.org/wiki/Women_in_computing#Worldwide_timeline]
+
+---
+
+# A few gentlemen too
+
+- Alan Turing (1912-1954)
+    - theoretical computer science
+    - mathematical formalisation of computers and computability ("Turing machine")
+    - philosophical implications of computing
+    - artificial intelligence
+    - also, pretty much won World War 2 by cracking Enigma...
+- Dennis Richie (1941-2011), Ken Thompson (1943-): C, Unix
+- Richard Stallman (1953-), Linus Torvalds (1969-): GNU & Linux, free software
+- Bjarne Stroustrup (1050-): C++
+- Donald Knuth (1938-), Edsger Dijkstra (1930-2002): algorithmics
+
+---
+
+> I believe that at the end of the century the use of words and general educated opinion will have altered so much that one will be able to speak of machines thinking without expecting to be contradicted. (Alan Turing)
+
+![Alan Turing](https://kpfa.org/wp-content/uploads/2015/05/Dr-Alan-Turing-2956483.jpg)

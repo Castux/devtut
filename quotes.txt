@@ -1,0 +1,32 @@
+“Computers are good at following instructions, but not at reading your mind.”
+— Donald Knuth
+   
+   “From a programmer’s point of view, the user is a peripheral that types when you issue a read request.”
+— P. Williams
+
+“Hardware: The parts of a computer system that can be kicked.”
+(Jeff Pesis)
+
+“Programmers are in a race with the Universe to create bigger and better idiot-proof programs, while the Universe is trying to create bigger and better idiots.  So far the Universe is winning.”
+(Rich Cook) 
+
+“That’s the thing about people who think they hate computers.  What they really hate is lousy programmers.”
+(Larry Niven) 
+
+“To iterate is human, to recurse divine.”
+(L. Peter Deutsch)
+
+“There are only two kinds of programming languages: those people always bitch about and those nobody uses.”
+(Bjarne Stroustrup) 
+
+“In C++ it’s harder to shoot yourself in the foot, but when you do, you blow off your whole leg.”
+(Bjarne Stroustrup)
+
+“If Java had true garbage collection, most programs would delete themselves upon execution.”
+(Robert Sewell) 
+
+“If debugging is the process of removing bugs, then programming must be the process of putting them in.”
+(Edsger W. Dijkstra) 
+
+“I think there’s a world market for about 5 computers.”
+(Thomas J. Watson, Chairman of the Board, IBM, circa 1948)
