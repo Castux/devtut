@@ -6,8 +6,22 @@ class: center middle
 
 ---
 
-What is programming?
-====================
+# Content
+
+- Programming
+- Programming languages
+- Choosing a language
+- Notable ladies in computing
+
+---
+
+class: middle center
+
+# Programming
+
+---
+
+# What is programming?
 
 > Programming is the act of giving a machine a set of instructions to enable it to perform a certain task.
 
@@ -15,8 +29,7 @@ The computer mindlessly does only and exactly what it's told, provided it's told
 
 ---
 
-Why do we program?
-==================
+# Why do we program?
 
 Computers can do basic computations very fast (much faster than humans, billions per second). That's useful for:
 
@@ -38,8 +51,9 @@ class: middle
 
 ---
 
-Why do we program? (2)
-==================
+# Human augmentation
+
+Programmable computers are a tool, nothing more, nothing less.
 
 Computers also have interesting input/output devices, which give them access to "non-human" powers, and by extension, gives humans non-human powers:
 
@@ -58,8 +72,7 @@ class: middle
 
 ---
 
-What can't we program?
-======================
+# What can't we program?
 
 Computers are very fast for very simple tasks, which can be combined in less simple tasks that are necessarily slower. Very complex or "unnatural" tasks are typically slow, if even possible. Brains are very parallel in nature, and some tasks that are trivial for a human being are typically hard for computers:
 
@@ -71,10 +84,31 @@ If you can break up a problem in simple sub-problems, odds are you can write a p
 
 ---
 
-Programming languages
-=====================
+class: middle center
 
-Basically, we tell the computer what to do. To "tell" we need to write. To write we need a common language.
+# Programming languages
+
+---
+
+# Vocabulary
+
+Programming is telling the computer what to do. To "tell" we need to write. To write we need a common language.
+
+- language: syntactic and semantic rules that describe a set of valid textual inputs, and their meaning
+- computer language: a language somehow understood by a computer
+- programming language: a computer language that describes instructions to be executed by a computer
+- (source) code: text written in a computer language
+- algorithm: instructions to solve a specific problem (language agnostic)
+- program: the implementation of algorithm(s) in a programming language, once compiled or interpreted. "A piece of software". Something that the computer can execute.
+
+Not all computer languages are programming languages (eg. HTML describes data, not instructions).
+
+- to code: to write text in a computer language
+- to program: to write text in a *programming* language, ie. to write a program
+
+---
+
+# Programming languages
 
 Wikipedia has a [list](http://en.wikipedia.org/wiki/List_of_programming_languages) of:
 
@@ -94,8 +128,7 @@ class: middle
 
 ---
 
-General purpose languages
-=========================
+# General purpose languages
 
 We want to make programs. Native desktop or mobile applications. For that we'll focus on general purpose languages. We can already remove:
 
@@ -109,8 +142,7 @@ There are many programming paradigms, or philosophies behind the design of langu
 
 ---
 
-High level, low level
-=====================
+# Low level
 
 One of the many ways to measure and classify languages is "how close to the machine" they are.
 
@@ -164,8 +196,7 @@ LBB0_1:                                 # %while.body
 
 ---
 
-High level, low level (2)
-=====================
+# High level
 
 Higher (disguised assembly, plus bonuses to make life easier):
 
@@ -187,8 +218,7 @@ int main()
 
 ---
 
-High level, low level (3)
-=====================
+# Highest level
 
 At the highest level:
 
@@ -207,8 +237,7 @@ At first sight, why bother with lower languages, they seem horrible, while the h
 
 ---
 
-High level, low level (4)
-=====================
+# Compromise
 
 What's a good compromise?
 
@@ -219,10 +248,7 @@ Compare solutions for the N-queens problem on [Rosetta Code](http://rosettacode.
 
 ---
 
-Compiled vs. interpreted
-========================
-
-**Compiled language**
+# Compiled language
 
 Development:
 
@@ -240,10 +266,9 @@ Use:
 
 ---
 
-Compiled vs. interpreted (2)
-========================
+# Interpreted language
 
-**Interpreted language ("scripting language")**
+("scripting" language)
 
 Development:
 
@@ -262,10 +287,7 @@ Interpreter = simulation of computer (slow). Often embedded in another program (
 
 ---
 
-Compiled vs. interpreted (3)
-========================
-
-**Bytecode**
+# Bytecode
 
 Development:
 
@@ -283,10 +305,7 @@ Use:
 
 ---
 
-Compiled vs. interpreted (4)
-========================
-
-**Bytecode**
+# Bytecode
 
 Advantage:
 
@@ -298,8 +317,13 @@ In practice, most interpreted languages also compile to bytecode, but there is n
 
 ---
 
-The final choice
-================
+class: middle center
+
+# Choosing a language
+
+---
+
+# The burden of choice
 
 "I want to learn to program. What language should I learn?"
 
@@ -307,80 +331,77 @@ Impossible to answer. Many programmers end up knowing several (many!), each adap
 
 ---
 
-A compromise
-============
+# The serious approach
 
-Go through an introduction to the C language to:
+Learn the C language to:
 
-- understand the memory model of a computer
+- understand inner workings of a computer
 - learn discipline in programming (because in C you can't do without)
 - know what happens behind the scenes of higher level languages (and thus program better with them)
 - realize that some seemingly trivial tasks are a pain in the butt
 
+Learn an object-oriented derivative of C for any serious programming job:
+
+- C++ is *the* most popular language to date
+- Objective-C, Swift for anything Apple related
+- C# for anything Microsoft related
+- D is "C++ done right", but is not so popular yet
+
+(when in doubt, all of the above...)
+
 ---
 
-A compromise (2)
-============
+# The scripting approach
 
-In parallel, or after, learn Lua:
+In parallel, or after, or instead, learn Lua/Ruby/Python:
 
-- can be learned in an afternoon (and mastered in a few more)
+- basics can be learned quite fast
 - seemingly complex tasks can in fact be trivial!
-- popularity increasing very fast
-- gorgeous construct: the Lua table combines goodies from other languages
-- the fastest of the "slow languages"
-- available frameworks for desktop applications and video games
-- my personal favorite :)
+- "real" programming languages
+    - actually used in real life
+    - available frameworks for desktop applications, video games, web servers...
+- less suited for big projects, because they require self imposed discipline
 
 ---
 
-Semantic nitpicking
-===================
+# The rest
 
-- language: syntactic and semantic rules that describe a set of valid textual inputs, and their meaning
-- computer language: a language somehow understood by a computer
-- programming language: a computer language that describes instructions to be executed by a computer
-- (source) code: text written in a computer language
-- algorithm: instructions to solve a specific problem (language agnostic)
-- program: the implementation of algorithm(s) in a programming language, once compiled or interpreted. "A piece of software". Something that the computer can execute.
+The *very* serious approach:
 
-Not all computer languages are programming languages (eg. HTML describes data, not instructions).
+- assembly: doing the job of a compiler
+- Lisp: old, still used, quite theoretical
+- functional languages: another way to think, quite powerful if you can wrap your head around them
+    - Haskell
+    - Erlang
 
-- to code: to write text in a computer language
-- to program: to write text in a *programming* language, ie. to write a program
+To get a job but hate yourself:
 
----
+- Java
 
-"That was fun, I want more."
-============================
-
-- master the core concepts of C. You are now a real programmer.
-- learn an object-oriented derivative of C
-	- C++ is *the* most popular language to date
-	- Objective-C for anything Apple related
-	- C# for anything Microsoft related
-	- D is "C++ done right", but is not so popular yet
-- if nerd pulsions, take a look at assembly. Just for curiosity.
-- whatever happens, don't learn Java.
-- gratuitously diss Java programmers. If you don't know why, they do.
-- create own programming language.
-- abandon all hopes of having a social life again.
-- create own operating system.
-- reach singularity and access higher level of existence.
+(No seriously, don't learn Java.)
 
 ---
 
-class: middle
+# There's more!
 
-> I'm a god!!
+For web development (ie. dynamic websites):
+
+- frontend: JavaScript
+- backend: PHP, Java, Python, Ruby, Erland, even C/C++
+- content: HTML, CSS (not programming languages ☺)
+
+The future:
+
+- Rust
+- Go
+- D
+- to be continued?
 
 ---
 
 class: middle center
 
-# Appendix
-
-## Notable ladies in computing
+# Notable ladies in computing
 
 ---
 
