@@ -1,6 +1,6 @@
 class: center middle
 
-# Intro
+# Introduction to programming
 
 ## Awesomeness begins
 
@@ -42,7 +42,7 @@ Computers can do basic computations very fast (much faster than humans, billions
 	- solving sudoku
 - solving problems that we know *how* to solve, but we never *actually* solved because it would take more than a lifetime
 	- finding the quadrillionth decimal of π (spoiler: it's a 0)
-	- enumerating mathematical objects (like [trees](http://noe.falzon.free.fr/trees/))
+	- enumerating mathematical objects (like [trees](http://castux.github.io/trees/))
 	- cracking cyphers
 
 ---
@@ -403,7 +403,7 @@ To get a job but hate yourself:
 For web development (ie. dynamic websites):
 
 - frontend: JavaScript
-- backend: PHP, Java, Python, Ruby, Erland, even C/C++
+- backend: PHP, Java, Python, Ruby, Erlang, even C/C++
 - content: HTML, CSS (not programming languages ☺)
 
 The future:
@@ -530,6 +530,8 @@ When the processor deals with memory, it looks like this:
 - use it for operation
 - write result of operation to some address
 
+![RAM](https://upload.wikimedia.org/wikipedia/commons/7/7c/RAM_module_SDRAM_1GiB.jpg)
+
 ---
 
 # What's data anyway?
@@ -563,9 +565,9 @@ Fortunately, the processor can also read, write and operate directly on integers
 
 # Other types
 
-- Text: one to one match between characters and numbers (an *encoding*). In ASCII, 'a' is 97, 'W' is 87 and '$' is 36.
+- Text: one to one match between characters and numbers (an *encoding*). In [ASCII](https://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart), 'a' is 97, 'W' is 87 and '$' is 36.
 - Colors: One number from 0 to 255 for the red component, another for the blue component, another for the green. Three bytes make a pixel.
-- Sound? The CD format specifies 2 byte integers for each samples, and 44100 samples per second, each sample representing the intensity of the pressure wave at a given moment.
+- Sound? The CD format specifies 2 byte integers for each sample, and 44100 samples per second, each sample representing the intensity of the pressure wave at a given moment.
 
 > It's all numbers!
 
@@ -577,24 +579,24 @@ class: middle center
 
 ---
 
-# Ada Lovelace (1815-1852)
+# Ada Lovelace (1815–1852)
 
 - 1842: wrote the first algorithm to be implemented on Charles Babbage's Analytical Engine (the first mechanical computer)
 - the first computer programmer!
 - fixed the first computer bug
 - programming language Ada named after her
 
-![Ada Lovelace](https://upload.wikimedia.org/wikipedia/commons/2/2e/Ada_Lovelace_1838.jpg)
+![Ada Lovelace](http://teamsuperforest.org/superforest/wp-content/uploads/2009/03/picture-83.png)
 
 ---
 
-# Hedy Lamarr (1913-2000)
+# Hedy Lamarr (1913–2000)
 
 - 1942: co-invented frequency-hopping spread spectrum technology to prevent radio jamming during World War 2
 - still used for most modern radio technologies: WiFi, Bluetooth, mobile phones, etc.
 - also, a famous actress...
 
-![Hedy Lamarr](https://upload.wikimedia.org/wikipedia/commons/f/f0/Hedy_Lamarr_in_a_1940_MGM_publicity_still.jpg)
+![Hedy Lamarr](http://i.kinja-img.com/gawker-media/image/upload/t_original/kiqohfm0da4lyobtwjhp.jpg)
 
 ---
 
@@ -613,13 +615,13 @@ class: middle center
 - led to COBOL, a language still used today
 - also, a rear-admiral in the US Navy...
 
-![Grace Hopper](https://upload.wikimedia.org/wikipedia/commons/a/ad/Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg)
+![Grace Hopper](http://i.telegraph.co.uk/multimedia/archive/02759/grace-hopper_2759716b.jpg)
 
 ---
 
 # And many more...
 
-See [Wikipedia][https://en.wikipedia.org/wiki/Women_in_computing#Worldwide_timeline]
+See [Wikipedia](https://en.wikipedia.org/wiki/Women_in_computing#Worldwide_timeline)
 
 ---
 
