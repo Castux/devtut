@@ -70,7 +70,7 @@ Anything you can think of, you can program and *make it happen*. Through languag
 
 class: middle
 
-> I'm a god!!
+![Progstates](https://pbs.twimg.com/media/BzmDP_yCEAAvXdx.png:large)
 
 ---
 
