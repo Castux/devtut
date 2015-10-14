@@ -279,6 +279,12 @@ Use:
 
 ---
 
+class: middle center
+
+![xkcd compiling](http://imgs.xkcd.com/comics/compiling.png)
+
+---
+
 # Interpreted language
 
 ("scripting" language)
@@ -616,6 +622,21 @@ class: middle center
 - also, a rear-admiral in the US Navy...
 
 ![Grace Hopper](http://i.telegraph.co.uk/multimedia/archive/02759/grace-hopper_2759716b.jpg)
+
+---
+
+# Margaret Hamilton (1936-)
+
+.left-column[
+- Lead software engineer, Apollo Program
+- Developped the software for the Apollo Guidance Computer
+- Put man on the moon: July 20th 1969 (Apollo 11)
+- Popularized the term "software engineering"
+]
+
+.right-column[
+![Margaret Hamilton](https://upload.wikimedia.org/wikipedia/commons/2/2e/Margaret_Hamilton.gif)
+]
 
 ---
 
