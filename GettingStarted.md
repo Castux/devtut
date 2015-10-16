@@ -56,13 +56,15 @@ An "all included" package:
 
 # Other OSes
 
-On Debian based Linux distributions:
+Probably there already (run `lua` in a terminal to check). If not:
+
+- on Debian based Linux distributions:
 
 ```
 sudo apt-get install lua51
 ```
 
-Mac OS X:
+- on Mac OS X:
 
 ```
 curl -O http://www.lua.org/ftp/lua-5.1.5.tar.gz
