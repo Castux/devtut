@@ -7,37 +7,31 @@ function read_file(name)
 	return text
 end
 
-function split(s,sep)
-
-	local parts = {}
-
-	local i = 1
-	while i < #s do
-
-		local pos = string.find(s, sep, i)
-		if pos == nil then
-			pos = #s + 1
-		end
-
-		local part = string.sub(s, i, pos - 1)
-		table.insert(parts, part)
-		i = pos + 1
-	end
-
-	return parts
-end
-
 function load_database()
 
 	-- load all text, split it into lines
 
-	local text = read_file("clients.csv")
-	local lines = split(text, "\n")
+	local lines = {}
+
+	local file = io.open("clients.tsv", "r")
+	for line in file:lines() do
+		local fields = {}
+		for field in string.gmatch(line .. "	", "(.-)	") do
+			table.insert(fields, field)
+		end
+
+		table.insert(lines, fields)
+		if #fields ~= 11 then
+			print(#fields)
+		end
+	end
+
+	do return end
 
 	-- split each line into fields
 
 	for i,line in ipairs(lines) do
-		lines[i] = split(line, ",")
+		lines[i] = split(line, "\t")
 	end
 
 	-- remove the first line, which has the field names
@@ -63,4 +57,4 @@ function load_database()
 end
 
 local clients = load_database()
-print(clients[243]["StreetAddress"])
+--print(clients[243]["StreetAddress"])
