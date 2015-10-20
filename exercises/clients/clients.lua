@@ -55,10 +55,14 @@ function average_age(clients)
 	
 	local ages = {}
 
+	-- os.date() is in format mm/dd/yy
+	local thisYear = string.match(os.date(), "%d+/%d+/(%d+)")
+	thisYear = 2000 + tonumber(thisYear)
+
 	local sum = 0
 	for i,v in ipairs(clients) do
 		local year = string.match(v["Birthday"], "%d%d%d%d")
-		local age = 2015 - tonumber(year)
+		local age = thisYear - tonumber(year)
 		table.insert(ages, age)
 		sum = sum + age
 	end
@@ -70,12 +74,12 @@ end
 
 function photo(clients)
 
-	print("Photo related clients:")
+	print("Photo related clients in Tunisia:")
 
 	for i,v in ipairs(clients) do
 		local job = string.lower(v["Occupation"])
 		local country = v["CountryFull"]
-		if string.match(job, "photo") and country == "Tunisia" then
+		if string.match(job, "photo") ~= nil and country == "Tunisia" then
 			print("", v["Username"], job)
 		end
 	end
@@ -96,10 +100,26 @@ function birthdays(clients)
 		local bday = string.match(v["Birthday"], "^%d+/%d+")
 		
 		if bday == today then
-			email(v["EmailAddress"], "Happy birthday " .. v["GivenName"] .. "!")
+			email(v["EmailAddress"], "Happy birthday " .. v["Username"] .. "!")
 		end
 	end
 
+end
+
+function countries_stats(clients)
+	local countries = {}
+
+	for i,v in ipairs(clients) do
+		local c = v["CountryFull"]
+		if countries[c] == nil then
+			countries[c] = 0
+		end
+		countries[c] = countries[c] + 1
+	end
+
+	for k,v in pairs(countries) do
+		print(k,v)
+	end
 end
 
 function test()
@@ -109,6 +129,7 @@ function test()
 	print("Average/median age:", average_age(clients))
 	photo(clients)
 	birthdays(clients)
+	countries_stats(clients)
 end
 
 test()
