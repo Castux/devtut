@@ -1,49 +1,31 @@
-function read_file(name)
-
-	local file = io.open(name, "r")
-	local text = file.read(file, "*a")
-	file.close(file)
-
-	return text
-end
-
 function load_database()
 
 	-- load all text, split it into lines
 
-	local lines = {}
+	local clients = {}
 
-	local file = io.open("clients.tsv", "r")
+	local file = io.open("clients.csv", "r")
+
 	for line in file:lines() do
 		local fields = {}
-		for field in string.gmatch(line .. "	", "(.-)	") do
+
+		for field in string.gmatch(line .. ";", "(.-);") do
 			table.insert(fields, field)
 		end
 
-		table.insert(lines, fields)
-		if #fields ~= 11 then
-			print(#fields)
-		end
-	end
-
-	do return end
-
-	-- split each line into fields
-
-	for i,line in ipairs(lines) do
-		lines[i] = split(line, "\t")
+		table.insert(clients, fields)
 	end
 
 	-- remove the first line, which has the field names
 
-	local fields = lines[1]
-	table.remove(lines, 1)
+	local fields = clients[1]
+	table.remove(clients, 1)
 
 	-- create tables using the field names
 
 	local database = {}
 
-	for i,line in ipairs(lines) do
+	for i,line in ipairs(clients) do
 
 		local t = {}
 		for j = 1,#fields do
@@ -57,4 +39,5 @@ function load_database()
 end
 
 local clients = load_database()
---print(clients[243]["StreetAddress"])
+print(#clients)
+print(clients[243]["StreetAddress"])
