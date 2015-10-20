@@ -55,9 +55,8 @@ function average_age(clients)
 	
 	local ages = {}
 
-	-- os.date() is in format mm/dd/yy
-	local thisYear = string.match(os.date(), "%d+/%d+/(%d+)")
-	thisYear = 2000 + tonumber(thisYear)
+	local now = os.date("*t")
+	thisYear = now["year"]
 
 	local sum = 0
 	for i,v in ipairs(clients) do
@@ -94,12 +93,13 @@ function birthdays(clients)
 
 	print("Birthdays:")
 
-	local today = string.match(os.date(), "^%d+/%d+")
+	local now = os.date("*t")
 	
 	for i,v in ipairs(clients) do
-		local bday = string.match(v["Birthday"], "^%d+/%d+")
-		
-		if bday == today then
+		local month,day = string.match(v["Birthday"], "^(%d+)/(%d+)")
+		month, day = tonumber(month), tonumber(day)
+
+		if month == now["month"] and day == now["day"] then
 			email(v["EmailAddress"], "Happy birthday " .. v["Username"] .. "!")
 		end
 	end

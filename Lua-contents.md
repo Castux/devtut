@@ -31,11 +31,11 @@ Lua 103
 Lua 104
 =======
 
-- captures in patterns
-	- read database, make records
-- input/output
-	- guessing game
-	- command line -> tic-tac-toe
+- Pattern captures
+	- client database exercise
+- User input
+	- number guessing game
+	- tic-tac-toe
 - table as structs: syntactic sugar
 	- standard library
 
