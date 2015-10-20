@@ -4,9 +4,7 @@ function load_database()
 
 	local clients = {}
 
-	local file = io.open("clients.csv", "r")
-
-	for line in file:lines() do
+	for line in io.lines("clients.csv") do
 		local fields = {}
 
 		for field in string.gmatch(line .. ";", "(.-);") do
