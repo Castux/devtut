@@ -18,7 +18,7 @@ Types
 | string  | `"Foo" 'Bar'`         |
 | boolean | `true false`          |
 | nil     | `nil`                 |
-| array   | `{"a", 5, true}`      |
+| array   | `{}`                  |
 
 Operators
 ---------
