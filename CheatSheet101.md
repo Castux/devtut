@@ -95,9 +95,9 @@ Numeric `for` loop
 ------------------
 
 ```lua
--- repeat block, at each iteration variable will be:
+-- repeat block with variable taking values
 -- start, start + step, start + 2*step, start + 3*step, etc.
--- until strictly greater than finish
+-- until it goes past finish
 
 for variable = start,finish,step do
 	-- block
