@@ -64,32 +64,14 @@ Statements
 |-------------------------|----------------------------------------------|
 | `print(expression)`     | print value of expression to standard output |
 | `variable = expression` | assign value of expression to variable       |
-| `break`                 | exit current loop                            |
-| `if` control structure  | select block of code according to test       |
+| `if` control structure  | select block of code according to condition  |
 | numeric `for` loop      | repeat block of code                         |
+| `break`                 | exit current loop                            |
 
 block: sequence of statements
 
 `if` control structure
 ----------------------
-
-```lua
--- execute block only if expression is true
-
-if expression then
-	-- block
-end
-```
-
-```lua
--- execute first block if expression is true, second block otherwise
-
-if expression then
-	-- block
-else
-	-- block
-end
-```
 
 ```lua
 -- execute block associated with the first expression which is true
@@ -113,19 +95,13 @@ Numeric `for` loop
 ------------------
 
 ```lua
--- execute block (finish - start + 1) times
--- in each iteration, variable is assigned the next consecutive number
-
-for variable = start,finish do
-	-- block
-end
-```
-
-```lua
--- optional step: variable will be start, start + step, start + 2*step, etc.
+-- repeat block, at each iteration variable will be:
+-- start, start + step, start + 2*step, start + 3*step, etc.
 -- until strictly greater than finish
 
 for variable = start,finish,step do
 	-- block
 end
 ```
+
+`step` is optional and defaults to 1
