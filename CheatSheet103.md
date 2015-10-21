@@ -183,15 +183,15 @@ array: table with consecutive integer indices only
 | `{"a", true, 5}`                          | array with initial values        |
 | `#array`                                  | length of array                  |
 | `{["Alice"] = 3, [true] = 2.4, [-4] = 3}` | table with initial values        |
-| tab[key]                                  | table indexing (setting/getting) |
+| `tab[key]`                                | table indexing (setting/getting) |
 
-| Array functions                | Meaning                                            |
-|--------------------------------|----------------------------------------------------|
-| `table.insert(array, value)    | insert `value` at end of `array`                   |
-| `table.insert(array, i, value) | insert `value` at position `i` in `array`          |
-| `table.remove(array)           | remove last element of `array`                     |
-| `table.remove(array, i)        | remove element at position `i` in `array`          |
-| `table.concat(array, sep)      | make string of array contents with separator `sep` |
+| Array functions                 | Meaning                                            |
+|----------------------------- ---|----------------------------------------------------|
+| `table.insert(array, value)`    | insert `value` at end of `array`                   |
+| `table.insert(array, i, value)` | insert `value` at position `i` in `array`          |
+| `table.remove(array)`           | remove last element of `array`                     |
+| `table.remove(array, i)`        | remove element at position `i` in `array`          |
+| `table.concat(array, sep)`      | make string of array contents with separator `sep` |
 
 String library
 --------------

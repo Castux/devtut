@@ -153,13 +153,13 @@ Arrays
 |------------------|-----------------------------------|
 | `{}`             | empty array literal               |
 | `{"a", true, 5}` | array with initial values literal |
-| array[index]     | array indexing (setting/getting)  |
+| `array[index]`   | array indexing (setting/getting)  |
 | `#array`         | length of array                   |
 
-| Array functions                | Meaning                                            |
-|--------------------------------|----------------------------------------------------|
-| `table.insert(array, value)    | insert `value` at end of `array`                   |
-| `table.insert(array, i, value) | insert `value` at position `i` in `array`          |
-| `table.remove(array)           | remove last element of `array`                     |
-| `table.remove(array, i)        | remove element at position `i` in `array`          |
-| `table.concat(array, sep)      | make string of array contents with separator `sep` |
+| Array functions                 | Meaning                                            |
+|---------------------------------|----------------------------------------------------|
+| `table.insert(array, value)`    | insert `value` at end of `array`                   |
+| `table.insert(array, i, value)` | insert `value` at position `i` in `array`          |
+| `table.remove(array)`           | remove last element of `array`                     |
+| `table.remove(array, i)`        | remove element at position `i` in `array`          |
+| `table.concat(array, sep)`      | make string of array contents with separator `sep` |
