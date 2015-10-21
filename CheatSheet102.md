@@ -1,6 +1,8 @@
 Lua cheat sheet
 ===============
 
+**Lua102**
+
 Lexical conventions
 -------------------
 

@@ -1,6 +1,8 @@
 Lua cheat sheet
 ===============
 
+**Lua101**
+
 Lexical conventions
 -------------------
 
@@ -49,13 +51,12 @@ Operators
 Expressions
 -----------
 
-| Expression         | Example     |
-|--------------------|-------------|
-| literal            | `1`         |
-| variable           | `foo`       |
-| expr operator expr | `1 + foo`   |
-| (expr)             | `(1 + foo)` |
-
+| Expression | Example     |
+|------------|-------------|
+| literal    | `1`         |
+| variable   | `foo`       |
+| operation  | `1 + foo`   |
+| (expr)     | `(1 + foo)` |
 
 Statements
 ----------
