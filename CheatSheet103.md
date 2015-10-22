@@ -1,7 +1,5 @@
-Lua cheat sheet
-===============
-
-**Lua103**
+Lua103 cheat sheet
+==================
 
 Lexical conventions
 -------------------
