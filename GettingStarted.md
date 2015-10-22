@@ -22,8 +22,6 @@ To program, you will need:
 	- lots of it on the web
 	- books
 
-But first, we need to pick a language.
- 
 ---
 
 # Lua 5.1
@@ -42,61 +40,34 @@ But first, we need to pick a language.
 
 ---
 
-# Lua for Windows
+# ZeroBrane Studio
 
-An "all included" package:
+A Lua integrated development environment (IDE):
 
 - Lua interpreter
-- A text editor (SCiTE) with Lua syntax highlighting and execution
-- Many useful libraries
+- text editor with Lua syntax highlighting
+- debugger
+- some useful libraries
+- free and open source
+- written in Lua!
 
-[Lua for Windows](https://github.com/rjpcomputing/luaforwindows)
+[ZeroBrane download](http://studio.zerobrane.com/download?not-this-time)
 
----
-
-# Other OSes
-
-Probably there already (run `lua` in a terminal to check). If not:
-
-- on Debian based Linux distributions:
-
-```
-sudo apt-get install lua51
-```
-
-- on Mac OS X:
-
-```
-curl -O http://www.lua.org/ftp/lua-5.1.5.tar.gz
-tar -xzvf lua-5.1.5.tar.gz
-cd lua-5.1.5
-make macosx
-make test
-sudo make install
-```
+- Windows:
+	- pick the zip archive, unzip it, copy the directory to eg. C:\Program Files
+	- right click zbstudio.exe -> Pin to Start Menu
+- Mac OS X:
+	- pick the dmg archive, open it, copy ZeroBrane Studio to eg. Home -> Applications
+	- drag ZeroBrane Studio to dock
 
 ---
 
-Text editor
-===========
+# ZeroBrane "project"
 
-I recommend [Sublime Text](http://www.sublimetext.com/)
-
-- Windows, Linux, Mac OS X
-- free for "evaluation purposes" (will nag you once in a while)
-- veeeeeery good text editor
-
-To be able to run Lua programs from the editor, select `Tools -> Build System -> New Build System...`, paste this in the file:
-
-```
-{
-	"cmd": ["lua", "$file"],
-	"file_regex": "^lua: (...*?):([0-9]*):?([0-9]*)",
-	"selector": "source.lua"
-}
-```
-
-Save file as `Lua.sublime-build` in the proposed directory. Run a file with `Ctrl-B`.
+- create directory LuaCourse (or something) in Documents (or where you want)
+- menu Project -> Project Directory -> Choose, pick your directory
+- save all your exercices there
+- they show up in the "Project" pane on the left
 
 ---
 
@@ -104,12 +75,14 @@ Save file as `Lua.sublime-build` in the proposed directory. Run a file with `Ctr
 
 A good old "Hello World" program:
 
+- open new file (ctrl-n)
+
 ```lua
 print("Hello, world!")
 ```
 
-- save it in a file `hello.lua`
-- run it from command line `lua hello.lua`, or from the text editor (eg. `Ctrl-B` in Sublime)
+- save it in a file `hello.lua` (ctrl-s)
+- run it (F6)
 
 Should output:
 
@@ -119,30 +92,21 @@ Hello, world!
 
 ---
 
+# Syntax highlighting tweak
+
+Menu Edit -> Preferences -> Settings: User
+
+```
+styles.indicator = {}
+```
+
+Save, restart ZeroBrane
+
+---
+
 # Lua ressources
 
 - [Reference manual](http://www.lua.org/manual/5.1/): **all** there is to know. The entire definition of the language and its standard library.
 - [Programming in Lua 1st ed.](http://www.lua.org/pil/contents.html): text book by the author of the language. Just as complete, but more accessible as learning material.
 - [lua-users wiki](http://lua-users.org/wiki/): snippets, FAQ, libraries...
 - [Google](http://www.google.com/) is your friend.
-
----
-
-# Suggested format
-
-Teacher:
-
-- these slides on a screen
-- a Lua console for quick demos
-- a text editor for longer examples
-
-Student
-
-- own computer with a text editor + interpreter handy
-- Lua reference manual open in a browser tab
-
----
-
-class: middle
-
-> We must learn to walk before we can run.
