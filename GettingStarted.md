@@ -92,12 +92,14 @@ Hello, world!
 
 ---
 
-# Syntax highlighting tweak
+# Editor tweaks
 
 Menu Edit -> Preferences -> Settings: User
 
 ```
 styles.indicator = {}
+editor.tabwidth = 4
+editor.usetabs  = true
 ```
 
 Save, restart ZeroBrane
