@@ -99,8 +99,8 @@ function birthdays(clients)
 		local month,day = string.match(v["Birthday"], "^(%d+)/(%d+)")
 		month, day = tonumber(month), tonumber(day)
 
-		if month == now["month"] and day == now["day"] then
-			email(v["EmailAddress"], "Happy birthday " .. v["Username"] .. "!")
+		if month == now["month"] and day == now["day"] and v["EmailAddress"] ~= "" then
+			email(v["EmailAddress"], "Happy birthday " .. v["GivenName"] .. "!")
 		end
 	end
 

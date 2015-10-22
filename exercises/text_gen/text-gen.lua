@@ -128,6 +128,8 @@ function pretty_print(words)
 
 		io.write(v)
 	end
+
+	print("")
 end
 
 local sequences = {}
