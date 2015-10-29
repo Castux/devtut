@@ -15,4 +15,4 @@ Unless indicated otherwise, all content is © 2015 Noé Falzon
 - course material is distributed under the [Creative Commons BY-NC license](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
 - source code is distributed under the [MIT license](LICENSE.txt)
 
-This course uses ebooks from [Project Gutenberg](www.gutenberg.org), released under the [Project Gutenberg License](http://www.gutenberg.org/wiki/Gutenberg:The_Project_Gutenberg_License).
+This course uses ebooks from [Project Gutenberg](http://www.gutenberg.org), released under the [Project Gutenberg License](http://www.gutenberg.org/wiki/Gutenberg:The_Project_Gutenberg_License).
