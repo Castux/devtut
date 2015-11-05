@@ -1,7 +1,5 @@
 function isPalindrome(input)
 
-	original = input	-- saved for the final message
-
 	-- remove spaces
 
 	withoutSpaces = ""
