@@ -94,3 +94,7 @@ function toFinnishSpelling(n)
 
 	return upTo999999(n)
 end
+
+for i = 1,999999 do
+	print(i .. ": " .. toFinnishSpelling(i))
+end

@@ -23,3 +23,6 @@ function digits2(n)
 
 	return result
 end
+
+print(table.concat(digits(129432), ","))
+print(table.concat(digits2(205647953), ","))
