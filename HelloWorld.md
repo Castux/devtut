@@ -6,6 +6,15 @@ class: middle center
 
 ---
 
+A Lua classic
+=============
+
+```lua
+print("Hello, world!")
+```
+
+---
+
 layout: true
 
 A C classic
@@ -45,48 +54,6 @@ Take note:
 
 layout: false
 
-A Lua classic
-=============
-
-```lua
-print("Hello, world!")
-```
-
-Notice:
-
-- no include: `print` is available by default
-- no `;`
-- no `main`: the whole file is the main function
-- the literal string looks the same
-- the call to the `print` function looks the same
-- `print` adds a newline by itself
-
----
-
-Variables
-=========
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-	int i;
-	i = 100;
-	printf("variable i contains %d\n", i);
-	
-	return 0;
-}
-```
-
-- variable `i` must be declared before use, with a *type* `int`
-- we *assign* 100 to `i`
-- `printf` replaces `%d` with the content of its second argument, expected to be an integer
-
-We could have combined declaration and assignment: `int i = 100;`
-
----
-
 Variables
 =========
 
@@ -103,6 +70,44 @@ Notice:
 - number type is implicitly deduced from the assignment
 - operator `..` concatenates a string with another
 - number `i` is automatically converted into the string "100"
+
+---
+
+Variables
+=========
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+	int i = 100;
+	printf("variable i contains %d\n", i);
+	
+	return 0;
+}
+```
+
+- variable `i` must be declared before use, with a *type* `int`
+- we *assign* 100 to `i`
+- `printf` replaces `%d` with the content of its second argument, expected to be an integer
+
+---
+
+Play it again, Sam!
+===================
+
+In Lua:
+
+```lua
+for i = 1,10 do
+	print("Hello, world " .. i .. "!")
+end
+```
+
+- keywords `do` and `end` delimitate the loop's body
+- implicit initialization, test and increment in loop
+- `i` is used without declaration
 
 ---
 
@@ -127,26 +132,41 @@ int main(void)
 
 Note:
 
-- `for` is a syntactic construct, not a function
+- more curly braces
 - explicit initialization, test and increment in loop
 - again, `i` must be declared before use
 
 ---
 
-Play it again, Sam!
-===================
+Functions
+=========
 
-In Lua:
+Lua:
 
 ```lua
-for i = 1,10 do
-	print("Hello, world " .. i .. "!")
+function print_and_double(i)
+	print(i)
+	return i*2
 end
+
+ret = print_and_double(5)
+print("ret = " .. ret)
 ```
 
-- no parentheses or braces, `do` and `end` instead
-- implicit initialization, test and increment in loop
-- again, `i` is used without declaration
+Notice:
+
+- only parameter name is declared
+- `print` can actually print anything, not just strings
+- `print_and_double` can be passed a variable of any type, here we passed a number
+
+---
+
+Functions
+=========
+
+Lua is *dynamically* typed: a variable can hold a value of *any* type. It's all decided during execution: the type of `i` is the type of whatever was passed as argument to the function. However, if `i` is not a number, trying to compute `i*2` will fail and produce an error at execution.
+
+More freedom means more self-imposed discipline!
 
 ---
 
@@ -182,40 +202,8 @@ Functions
 
 Take note:
 
+- even more curly braces
 - declared return type
 - declared parameter type and name
 
 C is *statically* typed: the type of every variable must be known at compile time. The compiler will enforce some discipline, and will refuse to compile if we try to pass something else than an `int` to the function `print_and_double`.
-
----
-
-Functions
-=========
-
-Lua:
-
-```lua
-function print_and_double(i)
-	print(i)
-	return i*2
-end
-
-ret = print_and_double(5)
-print("ret = " .. ret)
-```
-
-Notice:
-
-- no return type declaration
-- no parameter type declaration (just the name)
-- `print` can actually print anything, not just strings
-- `print_and_double` can be passed a variable of any type, here we passed a number
-
----
-
-Functions
-=========
-
-Lua is *dynamically* typed: a variable can hold a value of *any* type. It's all decided during execution: the type of `i` is the type of whatever was passed as argument to the function. However, if `i` is not a number, trying to compute `i*2` will fail and produce an error at execution.
-
-More freedom means more self-imposed discipline!
